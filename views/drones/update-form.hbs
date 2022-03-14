@@ -1,1 +1,15 @@
 <h2>Update the drone</h2>
+
+<form action="/drones/{{drone._id}}/edit" method="post">
+<label for="name">Name</label>
+<input type="text" name="title" id="title" value="">
+
+<label for="propellers">Number of propellers:  </label>
+<input type="text" name="title" id="title" value="">
+
+<label for="name">Speed</label>
+<input type="text" name="title" id="title" value="">
+</form>
+
+<button type="submit"> update form</button>
+<script src="/routes/drones.js" />
