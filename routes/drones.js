@@ -11,7 +11,7 @@ router.get('/drones',async (req, res, next) => {
 });
 
 router.get('/drones/create', (req, res, next) => {
-   res.render("routes/create-form" )
+   res.render("drones/create-form.hbs" )
    
 });
 
@@ -30,7 +30,8 @@ router.post("/drones/create", async (req, res) => {
 router.get('/drones/:id/edit', async (req, res, next) => {
   const DroneId = req.params.id;
   const drone = await DroneModel.findById(DroneId) ;
-  res.render("drones/update-form", {drone});
+  res.render("drones/update-form", {drone})
+
 });
 
 router.post('/drones/:id/edit', (req, res, next) => {
